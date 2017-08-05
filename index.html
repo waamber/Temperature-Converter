@@ -5,22 +5,26 @@
 	<link rel="stylesheet" type="text/css" href="temp.css">
 </head>
 <body>
-
+	<div class="header">
+		<h1>Temperature Converter</h1>
+	</div>
 	<div class= "tempInput">
 		<form id="tempForm">
-			<input type="number" name="numberInput" id="numberInput"><br>
-			<label>Which would you like to convert to?</label>
-			<input type="radio" name="tempValue" value="farenheit" id="fToC">Farenheit to Celcius
-			<input type="radio" name="tempValue" value="celcius" id="cToF">Celcius to Farenheit<br><br>
-			<button type="button" id="convertBtn">Convert</button>
+			<input type="number" name="numberInput" id="numberInput" placeholder="ENTER TEMP"><br>
+			<label>Which would you like to convert to?</label><br>
+			<div class="radioBtn">
+				<input type="radio" name="tempValue" value="farenheit" id="fToC">Farenheit to Celcius
+				<input type="radio" name="tempValue" value="celcius" id="cToF">Celcius to Farenheit
+			</div>
+			<div class="buttons">
+				<button class="submitBtn" type="button" id="convertBtn">Convert</button>
+				<input class ="resetBtn" type="button" value="Reset" id="resetBtn" onclick="clearForm()">
+			</div>
 		</form>
-	</div>
 	
-	<div id="tempResult">
-		<h2></h2>
-	</div><br>
-
-	<input type="button" value="Reset" onclick="clearForm()">
+	
+		<div id="tempResult"></div><br>
+	</div>
 
 <script type="text/javascript" src="temp.js"></script>
 </body>
