@@ -1,5 +1,47 @@
 body {
-	
+	background-color: oldlace;
+	margin: 0 auto;
+}
+
+.header {
+	background-image: url("http://massoplato.com/wp-content/uploads/2017/01/hot-cold.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	text-shadow: 2px 2px black;
+	font-size: 30px;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	padding: 5px;
+}
+
+#tempForm {
+	text-align: center;
+}
+
+label {
+	font-size: 25px;
+	margin: 10px;
+}
+
+#numberInput {
+	text-align: center;
+	margin: 25px;
+	padding: 5px;
+	height: 25%;
+	border-radius: 5px;
+}
+
+.radioBtn {
+	margin: 15px;
+}
+
+.submitBtn, input.resetBtn {
+	background-color: cornflowerblue;
+	color: white;
+	font-size: 13px;
+	border-radius: 5px;
 }
 
 #red {
@@ -13,3 +55,27 @@ body {
 #green {
 	color: green;
 }
+
+#red, #blue, #green {
+	text-shadow: 2px 2px black;
+}
+
+#tempResult {
+	background-color: white;
+	border-radius: 5px;
+	max-width: 10%; 
+	max-height: 25%;
+	margin-left: 45%;
+	text-align: center;
+	font-size: 45px;
+}
+
+.buttons {
+	text-align: center;
+}
+ 
+
+
+
+
+
