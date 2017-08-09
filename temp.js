@@ -11,7 +11,6 @@ function ultimateConverter() {
 	var converted = inputConvert(input, selectedTemp);
 	var color = colorChange(converted, selectedTemp);
 		buildTemp(converted, color);
-		console.log(converted);
 };
 
 //Runs ultimateConverter when clicked
@@ -21,9 +20,7 @@ btn.addEventListener("click", function() {
 
 
 //Resets form and returns innerHTML to an empty string
-resetBtn.addEventListener("click", function(ev) {
-	debugger
-	ev.currentTarget.setAttribute('text', 'red')
+resetBtn.addEventListener("click", function() {
 	form.reset();
 	tempContainer.innerHTML = "";
 });
