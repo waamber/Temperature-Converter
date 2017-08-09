@@ -1,5 +1,8 @@
 //When convert button is clicked: convert, build string and color change will run.
 var btn = document.getElementById("convertBtn");
+var resetBtn = document.getElementById("resetBtn");
+var form = document.getElementById("tempForm");
+var tempContainer = document.getElementById("tempResult");
 
 //Convert input into F or C
 function ultimateConverter() {
@@ -16,10 +19,20 @@ btn.addEventListener("click", function() {
 	ultimateConverter();
 });
 
+
+//Resets form and returns innerHTML to an empty string
+resetBtn.addEventListener("click", function(ev) {
+	debugger
+	ev.currentTarget.setAttribute('text', 'red')
+	form.reset();
+	tempContainer.innerHTML = "";
+});
+
+
 //Runs ultimateConverter when you press enter 
 document.onkeydown = pressEnter  
 	function pressEnter (event) {
-		if (event.keyCode === 13) {
+		if(event.keyCode === 13) {
     	ultimateConverter();
 	}
 };
@@ -35,7 +48,6 @@ function inputConvert(input, selectedTemp) {
 
 //Take converted temp and build string to put in DOM
 function buildTemp(converted, colorChange) {
-	var tempContainer = document.getElementById("tempResult");
 	var convertedString = "";
 	convertedString +=	'<h1 id="' + colorChange + '">' + converted + '</h1>';
 	tempContainer.innerHTML = convertedString;
@@ -53,10 +65,7 @@ function colorChange(converted, selectedTemp) {
 	}
 };
 
-//Clear Form 
-function clearForm() {
-	document.getElementById("tempForm").reset();
-};
+
 
 
 
