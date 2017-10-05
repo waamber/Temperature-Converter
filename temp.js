@@ -17,9 +17,11 @@ btn.addEventListener("click", function() {
 });
 
 //Runs ultimateConverter when you press enter 
+
 document.onkeydown = pressEnter  
 	function pressEnter (event) {
 		if (event.keyCode === 13) {
+			debugger
     	ultimateConverter();
 	}
 };
